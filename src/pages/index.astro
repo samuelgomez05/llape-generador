@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Llape from '../components/Llape.astro'
+import Form from '../components/Form.astro'
+---
+
+<Layout>
+  <main class="flex items-center justify-center bg-[#f6f4fb] pb-12">
+    <section class="flex w-full max-w-7xl flex-col items-center lg:flex-row lg:items-start lg:justify-between lg:gap-4">
+      <div class="w-full px-4 pb-12 pt-16 md:px-6 md:pb-16 lg:grow lg:px-8">
+        <div class="mb-6 flex flex-col gap-4">
+          <h1 class="text-2xl font-bold text-[#2c2044] lg:text-3xl">Llape - La forma más fácil de <span class="text-[#742384]">"pagar" sin pagar</span></h1>
+          <p class="text-[#69607B]">Llena el formulario y genera una captura de pantalla del "Llapeo", juega una broma divertida a tus amigos y familiares.</p>
+        </div>
+        <Form />
+      </div>
+      <Llape />
+    </section>
+  </main>
+  <footer class="bg-[#742384] px-4 py-8 text-center">
+    <div class="mx-auto max-w-7xl">
+      <p class="text-xs text-white">No usar para fines maliciosos ni estafas, descargo toda responsabilidad de mi parte por cualquier daño que pudiese causar, guiño guiño.</p>
+  </footer>
+  <script src="/src/scripts/validate.js"></script>
+</Layout>

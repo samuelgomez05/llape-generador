@@ -1,0 +1,31 @@
+<form id="form" class="flex flex-col gap-4" novalidate autocomplete="off"> 
+  <div class="flex gap-4">
+    <div class="w-1/2">
+      <label class="mb-1 block font-medium text-gray-900" for="title">Título</label>
+      <input id="title" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-[#403556] outline-none focus:border-[#742384]" type="text" placeholder="Escribe un título" value="¡Yapeaste!" />
+    </div>
+    <div class="w-1/2">
+      <label class="mb-1 block font-medium text-gray-900" for="quantity">Cantidad</label>
+      <input id="quantity" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-[#403556] outline-none focus:border-[#742384]" type="text" placeholder="Ejm: 75" />
+    </div>
+  </div>
+  <div>
+    <label class="mb-1 block font-medium text-gray-900" for="name">Nombre</label>
+    <input id="name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-[#403556] outline-none focus:border-[#742384]" type="text" placeholder="Ejm: José P. Castillo T." />
+  </div>
+  <div class="flex gap-4">
+    <div class="w-1/2">
+      <label class="mb-1 block font-medium text-gray-900" for="phone">Celular <span class="text-sm font-light">(3 últimos dígitos)</span></label>
+      <input id="phone" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-[#403556] outline-none focus:border-[#742384]" type="text" placeholder="Ejm: 711" />
+    </div>
+    <div class="w-1/2">
+      <label class="mb-1 block font-medium text-gray-900" for="destine">Destino</label>
+      <input id="destine" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-[#403556] outline-none focus:border-[#742384]" type="text" placeholder="Ejm: Yape" value="Yape" />
+    </div>
+  </div>
+  <div>
+    <label class="mb-1 block font-medium text-gray-900" for="message">Mensaje <span class="text-sm font-light">(Opcional)</span></label>
+    <textarea id="message" class="block w-full resize-none rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-[#403556] outline-none focus:border-[#742384]" rows="3"></textarea>
+  </div>
+  <button class="mt-4 cursor-pointer rounded-lg bg-[#10cbb4] px-6 py-3 font-medium text-white transition-colors duration-500 hover:bg-[#00ad97]">Generar "Llapeo"</button>
+</form>

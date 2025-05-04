@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Roboto Variable', sans-serif;
+  }
+}
+
+@layer components {
+  .label-error {
+    font-size: 0.75rem;
+    color: #de4a65 !important;
+    margin-top: 0.25rem;
+  }
+
+  .input-error {
+    border-color: #de4a65 !important;
+  }
+}
