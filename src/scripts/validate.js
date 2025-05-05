@@ -2,24 +2,6 @@ import JustValidate from 'just-validate';
 
 const validator = new JustValidate('#form');
 
-const message = document.querySelector('#message');
-const boxMessage = document.querySelector('#box-message');
-const boxMessageText = document.querySelector('#box-message p');
-
-message.addEventListener('input', () => {
-  const value = message.value;
-
-  if (value.length > 0) {
-    boxMessage.classList.remove('hidden');
-    boxMessage.classList.add('flex');
-    boxMessageText.textContent = value;
-  } else {
-    boxMessage.classList.add('hidden');
-    boxMessage.classList.remove('flex');
-    boxMessageText.textContent = '';
-  }
-});
-
 validator
   .addField(
     '#title',
@@ -48,7 +30,12 @@ validator
       {
         rule: 'minNumber',
         value: 1,
-        errorMessage: 'Este campo debe ser mayor a 1',
+        errorMessage: 'Este campo debe ser mayor a 0',
+      },
+      {
+        rule: 'maxNumber',
+        value: 500,
+        errorMessage: 'Este campo acepta un máximo de 500',
       },
     ],
     {
