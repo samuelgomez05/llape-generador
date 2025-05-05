@@ -12,6 +12,7 @@
     "@fontsource-variable/roboto": "^5.2.5",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.9",
+    "html-to-image": "^1.11.13",
     "just-validate": "^4.3.0",
     "tailwindcss": "^4.1.4"
   }

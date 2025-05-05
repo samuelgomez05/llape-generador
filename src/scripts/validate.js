@@ -1,4 +1,6 @@
 import JustValidate from 'just-validate';
+import * as htmlToImage from 'html-to-image';
+import { toPng } from 'html-to-image';
 
 const validator = new JustValidate('#form');
 
@@ -95,4 +97,18 @@ validator
       errorLabelCssClass: ['label-error'],
       errorFieldCssClass: ['input-error'],
     }
-  );
+  )
+  .onSuccess(() => {
+    const llape = document.querySelector('.llape');
+    const downloadLink = document.querySelector('#download-llape');
+
+    htmlToImage
+      .toPng(llape)
+      .then((dataUrl) => {
+        downloadLink.href = dataUrl;
+        downloadLink.click();
+      })
+      .catch((err) => {
+        console.error('Algo salió mal', err);
+      });
+  });
