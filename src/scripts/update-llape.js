@@ -12,7 +12,15 @@ const llapeQuantity = document.querySelector('.llape-quantity');
 const llapeName = document.querySelector('.llape-name');
 const llapeDate = document.querySelector('.llape-date');
 const llapeTime = document.querySelector('.llape-time');
-const llapeCodeSecurity = document.querySelector('.llape-code-security');
+const llapeFirstDigitCodeSecurity = document.querySelector(
+  '.llape-code-security span:nth-child(1)'
+);
+const llapeSecondDigitCodeSecurity = document.querySelector(
+  '.llape-code-security span:nth-child(2)'
+);
+const llapeThirdDigitCodeSecurity = document.querySelector(
+  '.llape-code-security span:nth-child(3)'
+);
 const llapePhone = document.querySelector('.llape-phone');
 const llapeDestine = document.querySelector('.llape-destine');
 const llapeOperation = document.querySelector('.llape-operation');
@@ -99,3 +107,19 @@ setTimeout(() => {
   updateDateTime();
   setInterval(updateDateTime, 60000); // Update every minute
 }, msUntilNextMinute);
+
+// Generate random number
+function generateRandomNumber(min, max, digits) {
+  let randomNumber = '';
+
+  for (let i = 0; i < digits; i++) {
+    randomNumber += String(Math.floor(Math.random() * (max - min + 1)) + min);
+  }
+
+  return randomNumber;
+}
+
+llapeFirstDigitCodeSecurity.textContent = generateRandomNumber(0, 9, 1);
+llapeSecondDigitCodeSecurity.textContent = generateRandomNumber(0, 9, 1);
+llapeThirdDigitCodeSecurity.textContent = generateRandomNumber(0, 9, 1);
+llapeOperation.textContent = generateRandomNumber(0, 9, 8);
