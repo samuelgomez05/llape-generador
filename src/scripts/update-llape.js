@@ -56,3 +56,46 @@ function updateLlape(input, llapeText) {
     }
   });
 }
+
+// Get date and time
+function updateDateTime() {
+  const now = new Date();
+  const day = now.getDate() < 10 ? '0' + now.getDate() : now.getDate();
+  const monthIndex = now.getMonth();
+  const year = now.getFullYear();
+  const textMonths = [
+    'ene.',
+    'feb.',
+    'mar.',
+    'abr.',
+    'may.',
+    'jun.',
+    'jul.',
+    'ago.',
+    'sep.',
+    'oct.',
+    'nov.',
+    'dic.',
+  ];
+  const month = textMonths[monthIndex];
+  const hour = now.getHours() % 12 ? now.getHours() % 12 : 12;
+  const formatHour = hour < 10 ? '0' + hour : hour;
+  const getAmPm = now.getHours() >= 12 ? 'p. m.' : 'a. m.';
+  const minute =
+    now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+
+  llapeDate.textContent = `${day} ${month} ${year}`;
+  llapeTime.textContent = `${formatHour}:${minute} ${getAmPm}`;
+}
+
+updateDateTime();
+
+// Calculate the time until the next minute
+const now = new Date();
+const msUntilNextMinute = (60 - now.getSeconds()) * 1000;
+
+// Wait for the next minute exactly for the update
+setTimeout(() => {
+  updateDateTime();
+  setInterval(updateDateTime, 60000); // Update every minute
+}, msUntilNextMinute);
