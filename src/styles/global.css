@@ -16,4 +16,17 @@
   .input-error {
     border-color: #de4a65 !important;
   }
+
+  /* Ocultar el botón de incremento y decremento de input número */
+  /* Chrome, Safari, Edge, Opera */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
