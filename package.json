@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource-variable/roboto": "^5.2.5",
     "@tailwindcss/vite": "^4.1.4",
+    "@vercel/analytics": "^1.5.0",
     "astro": "^5.7.9",
     "html-to-image": "^1.11.13",
     "just-validate": "^4.3.0",
